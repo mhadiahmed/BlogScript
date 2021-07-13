@@ -1,0 +1,15 @@
+{% extends 'dashboard.html' %}
+
+
+{% block title %}
+    Delete {{post.title}}
+{% endblock title %}
+
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>do you want to delete {{post.title}}??</p>
+        <button type="submit">Confirm</button>
+    </form>
+{% endblock content %}

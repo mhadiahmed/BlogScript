@@ -1,0 +1,72 @@
+{% load static %}
+<title>Login</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        {% comment %} <div class="fadeIn first">
+            <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+        </div> {% endcomment %}
+        {% if form.errors %}
+        <p class="alert alert-danger">Your username and password didn't match. Please try again.</p>
+        {% endif %}
+        {% if next %}
+        {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page. To proceed,
+            please login with an account that has access.</p>
+        {% else %}
+        <p>Please login to see this page.</p>
+        {% endif %}
+        {% endif %}
+        <!-- Login Form -->
+        <form method="post" action="{% url 'core:login' %}" class="mt-5">
+            {% csrf_token %}
+            <input type="text" id="id_username" class="fadeIn second" name="username" placeholder="User Name"
+                autocomplete="off">
+            <input type="password" id="id_password" class="fadeIn third" name="password" placeholder="Password"
+                autocomplete="off">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+            <input type="hidden" name="next" value="{{ next }}">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="{% url 'authors:password_reset' %}">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>
+
+{% comment %} {% block content %}
+
+
+
+
+
+<form method="post" action="{% url 'core:login' %}">
+
+    <table>
+        <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="login">
+
+</form>
+
+{# Assumes you setup the password_reset view in your URLconf #}
+<p><a>Lost password?</a></p>
+{% endblock %}{% endcomment %}
