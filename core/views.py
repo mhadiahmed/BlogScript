@@ -54,7 +54,7 @@ class PostDetailView(CreateView,JsonLdDetailView,DetailView):
     
     def get_success_url(self):
         messages.success(self.request,"Your comment is submitted to the admin will be visible soon")
-        return reverse('core:detail', kwargs={"pk":self.object.id})
+        return reverse('core:detail', kwargs={"slug":self.object.slug})
     
     def get_context_data(self, **kwargs):
         context = super(PostDetailView, self).get_context_data(**kwargs)
