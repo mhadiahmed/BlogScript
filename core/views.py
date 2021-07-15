@@ -35,14 +35,14 @@ class PostListViewFront(ListView):
 class CategoryPostListView(ListView):
     model = Post
     template_name = "core/post_list.html"
-    
+    lockup_field = 'slug'
     def get_context_data(self, **kwargs):
         context = super(CategoryPostListView, self).get_context_data(**kwargs)
-        context.update({"featured":Post.objects.filter(category=self.kwargs.get('pk'), status="active", featured=True)[:6]})
+        context.update({"featured":Post.objects.filter(category__slug=self.kwargs.get('slug'), status="active", featured=True)[:6]})
         return context
 
     def get_queryset(self):
-        return Post.objects.filter(category=self.kwargs.get('pk'), status="active")
+        return Post.objects.filter(category__slug=self.kwargs.get('slug'), status="active")
 
 
 class PostDetailView(CreateView,JsonLdDetailView,DetailView):

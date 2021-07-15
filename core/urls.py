@@ -8,5 +8,5 @@ urlpatterns = [
     path('login/',LoginView.as_view(), name="login"),
     path('logout/',LogoutView.as_view(), name="logout"),
     path('<str:slug>/', views.PostDetailView.as_view(), name="detail"),
-    path('category/<str:pk>/', views.CategoryPostListView.as_view(), name="category")
+    path('category/<str:slug>/', views.CategoryPostListView.as_view(), name="category")
 ]
