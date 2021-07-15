@@ -1,3 +1,4 @@
+from django.views.generic.edit import FormMixin
 from site_settings.models import SiteSetting
 from comments.forms import CommentForm
 # from comments.models import Comment
@@ -45,7 +46,7 @@ class CategoryPostListView(ListView):
         return Post.objects.filter(category__slug=self.kwargs.get('slug'), status="active")
 
 
-class PostDetailView(CreateView,JsonLdDetailView,DetailView):
+class PostDetailView(JsonLdDetailView,FormMixin,DetailView):
     model = Post
     template_name = "core/post_detail.html"
     form_class = CommentForm
