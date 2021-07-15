@@ -45,11 +45,11 @@ class CategoryPostListView(ListView):
         return Post.objects.filter(category=self.kwargs.get('pk'), status="active")
 
 
-class PostDetailView(JsonLdDetailView,CreateView,DetailView):
+class PostDetailView(CreateView,JsonLdDetailView,DetailView):
     model = Post
     template_name = "core/post_detail.html"
     form_class = CommentForm
-    lockup_field = 'slug'
+    # lockup_field = 'slug'
     
     
     def get_success_url(self):

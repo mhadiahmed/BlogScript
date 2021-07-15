@@ -169,6 +169,19 @@ section {
 	overflow: hidden !important;
 }
 
+.m-image {
+	width: 294px;
+	height: 196;
+}
+
+.embed-responsive .card-img-top {
+	object-fit: cover;
+}
+
+.card-img-top {
+	height: 11vw;
+}
+
 span.post-name,
 span.post-date,
 span.author-meta {

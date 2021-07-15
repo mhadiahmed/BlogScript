@@ -94,8 +94,8 @@ Home
             <div class="card">
 
                 {% if post.image %}
-                <div class="all-images">
-                    <img class="thumbnail" src="{{post.image.url}}" alt="">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <img class="card-img-top embed-responsive-item" src="{{post.image.url}}" alt="">
                 </div>
                 {% endif %}
                 <div class="card-block">

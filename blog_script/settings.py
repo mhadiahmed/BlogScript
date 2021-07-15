@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8663&r0t6vo-v5s=dc5-^2**e&88=wu0&6q)!y4(#e15%u5#v7
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+JSON_LD_EMPTY_INPUT_RENDERING = 'silent'
 
 # Application definition
 
