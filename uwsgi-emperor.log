@@ -1,0 +1,297 @@
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jul 15 13:04:26 2021] ***
+compiled with version: 9.3.0 on 14 July 2021 08:00:32
+os: Linux-5.4.0-77-generic #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021
+nodename: techwire
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/BlogScript
+detected binary path: /root/.local/share/virtualenvs/BlogScript-IwKK3Yle/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/BlogScript/
+your processes number limit is 7620
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/BlogScript/blog_script.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+PEP 405 virtualenv detected: /root/.local/share/virtualenvs/BlogScript-IwKK3Yle
+Set PythonHome to /root/.local/share/virtualenvs/BlogScript-IwKK3Yle
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562df78e0690
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 801944 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x562df78e0690 pid: 856 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 856)
+spawned uWSGI worker 1 (pid: 875, cores: 1)
+spawned uWSGI worker 2 (pid: 876, cores: 1)
+spawned uWSGI worker 3 (pid: 877, cores: 1)
+spawned uWSGI worker 4 (pid: 878, cores: 1)
+spawned uWSGI worker 5 (pid: 879, cores: 1)
+spawned uWSGI worker 6 (pid: 880, cores: 1)
+spawned uWSGI worker 7 (pid: 881, cores: 1)
+spawned uWSGI worker 8 (pid: 882, cores: 1)
+spawned uWSGI worker 9 (pid: 883, cores: 1)
+spawned uWSGI worker 10 (pid: 884, cores: 1)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/BlogScript
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/BlogScript/blog_script.sock)
+running /root/.local/share/virtualenvs/BlogScript-IwKK3Yle/bin/uwsgi
+[uWSGI] getting INI configuration from blog_script_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jul 15 11:14:18 2021] ***
+compiled with version: 9.3.0 on 14 July 2021 08:00:32
+os: Linux-5.4.0-77-generic #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021
+nodename: techwire
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/BlogScript
+detected binary path: /root/.local/share/virtualenvs/BlogScript-IwKK3Yle/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/BlogScript/
+your processes number limit is 7620
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/BlogScript/blog_script.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+PEP 405 virtualenv detected: /root/.local/share/virtualenvs/BlogScript-IwKK3Yle
+Set PythonHome to /root/.local/share/virtualenvs/BlogScript-IwKK3Yle
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x558a67c8fe90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 801944 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x558a67c8fe90 pid: 856 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 856)
+spawned uWSGI worker 1 (pid: 1605, cores: 1)
+spawned uWSGI worker 2 (pid: 1606, cores: 1)
+spawned uWSGI worker 3 (pid: 1607, cores: 1)
+spawned uWSGI worker 4 (pid: 1608, cores: 1)
+spawned uWSGI worker 5 (pid: 1609, cores: 1)
+spawned uWSGI worker 6 (pid: 1610, cores: 1)
+spawned uWSGI worker 7 (pid: 1611, cores: 1)
+spawned uWSGI worker 8 (pid: 1612, cores: 1)
+spawned uWSGI worker 9 (pid: 1613, cores: 1)
+spawned uWSGI worker 10 (pid: 1614, cores: 1)
+...brutally killing workers...
+Gracefully killing worker 1 (pid: 1605)...
+worker 1 buried after 1 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 6 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /home/BlogScript
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/BlogScript/blog_script.sock)
+running /root/.local/share/virtualenvs/BlogScript-IwKK3Yle/bin/uwsgi
+[uWSGI] getting INI configuration from blog_script_uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jul 15 11:35:07 2021] ***
+compiled with version: 9.3.0 on 14 July 2021 08:00:32
+os: Linux-5.4.0-77-generic #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021
+nodename: techwire
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/BlogScript
+detected binary path: /root/.local/share/virtualenvs/BlogScript-IwKK3Yle/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/BlogScript/
+your processes number limit is 7620
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/BlogScript/blog_script.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+PEP 405 virtualenv detected: /root/.local/share/virtualenvs/BlogScript-IwKK3Yle
+Set PythonHome to /root/.local/share/virtualenvs/BlogScript-IwKK3Yle
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5620781bae90
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 801944 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5620781bae90 pid: 856 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 856)
+spawned uWSGI worker 1 (pid: 2525, cores: 1)
+spawned uWSGI worker 2 (pid: 2526, cores: 1)
+spawned uWSGI worker 3 (pid: 2527, cores: 1)
+spawned uWSGI worker 4 (pid: 2528, cores: 1)
+spawned uWSGI worker 5 (pid: 2529, cores: 1)
+spawned uWSGI worker 6 (pid: 2530, cores: 1)
+spawned uWSGI worker 7 (pid: 2531, cores: 1)
+spawned uWSGI worker 8 (pid: 2532, cores: 1)
+spawned uWSGI worker 9 (pid: 2533, cores: 1)
+spawned uWSGI worker 10 (pid: 2534, cores: 1)
+Thu Jul 15 11:36:35 2021 - uWSGI worker 10 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jul 15 13:53:36 2021] ***
+compiled with version: 9.3.0 on 14 July 2021 08:00:32
+os: Linux-5.4.0-77-generic #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021
+nodename: techwire
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/BlogScript
+detected binary path: /root/.local/share/virtualenvs/BlogScript-IwKK3Yle/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/BlogScript/
+your processes number limit is 7620
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/BlogScript/blog_script.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+PEP 405 virtualenv detected: /root/.local/share/virtualenvs/BlogScript-IwKK3Yle
+Set PythonHome to /root/.local/share/virtualenvs/BlogScript-IwKK3Yle
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5613897c6690
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 801944 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5613897c6690 pid: 1186 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1186)
+spawned uWSGI worker 1 (pid: 1204, cores: 1)
+spawned uWSGI worker 2 (pid: 1205, cores: 1)
+spawned uWSGI worker 3 (pid: 1206, cores: 1)
+spawned uWSGI worker 4 (pid: 1207, cores: 1)
+spawned uWSGI worker 5 (pid: 1208, cores: 1)
+spawned uWSGI worker 6 (pid: 1209, cores: 1)
+spawned uWSGI worker 7 (pid: 1210, cores: 1)
+spawned uWSGI worker 8 (pid: 1211, cores: 1)
+spawned uWSGI worker 9 (pid: 1212, cores: 1)
+spawned uWSGI worker 10 (pid: 1213, cores: 1)
+[pid: 1204|app: 0|req: 1/1] 102.126.6.31 () {44 vars in 1095 bytes} [Thu Jul 15 12:07:10 2021] GET / => generated 8074 bytes in 262 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 1/2] 102.126.6.31 () {44 vars in 1208 bytes} [Thu Jul 15 12:07:25 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14151 bytes in 127 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 2/3] 102.126.6.31 () {52 vars in 1440 bytes} [Thu Jul 15 12:07:35 2021] POST /make-your-life-better-by-saying-thank-you-in-these/ => generated 0 bytes in 26 msecs (HTTP/1.1 302) 7 headers in 459 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 2/4] 102.126.6.31 () {46 vars in 1290 bytes} [Thu Jul 15 12:07:36 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14150 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 3/5] 102.126.6.31 () {44 vars in 1177 bytes} [Thu Jul 15 12:07:45 2021] GET /dashboard/ => generated 45551 bytes in 60 msecs (HTTP/1.1 200) 7 headers in 280 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 3/6] 102.126.6.31 () {44 vars in 951 bytes} [Thu Jul 15 12:07:55 2021] GET /comments/ => generated 28294 bytes in 40 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 4/7] 102.126.6.31 () {44 vars in 944 bytes} [Thu Jul 15 12:08:00 2021] GET /posts/ => generated 49932 bytes in 44 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 4/8] 102.126.6.31 () {44 vars in 955 bytes} [Thu Jul 15 12:08:04 2021] GET /posts/edit/4/ => generated 34006 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 5/9] 102.126.6.31 () {52 vars in 1217 bytes} [Thu Jul 15 12:09:11 2021] POST /posts/edit/4/ => generated 0 bytes in 69 msecs (HTTP/1.1 302) 7 headers in 379 bytes (3 switches on core 0)
+[pid: 1213|app: 0|req: 5/10] 102.126.6.31 () {46 vars in 1127 bytes} [Thu Jul 15 12:09:11 2021] GET /posts/ => generated 50492 bytes in 43 msecs (HTTP/1.1 200) 7 headers in 280 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 6/11] 102.126.6.31 () {42 vars in 888 bytes} [Thu Jul 15 12:09:20 2021] GET / => generated 8078 bytes in 48 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 6/12] 102.126.6.31 () {44 vars in 919 bytes} [Thu Jul 15 12:10:13 2021] GET / => generated 8078 bytes in 45 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 7/13] 102.126.6.31 () {46 vars in 941 bytes} [Thu Jul 15 12:10:36 2021] GET / => generated 8078 bytes in 45 msecs (HTTP/1.1 200) 6 headers in 181 bytes (2 switches on core 0)
+[pid: 1204|app: 0|req: 8/14] 102.126.6.31 () {46 vars in 892 bytes} [Thu Jul 15 12:12:20 2021] GET /favicon.ico => generated 0 bytes in 2 msecs (HTTP/1.1 301) 5 headers in 181 bytes (1 switches on core 0)
+Not Found: /favicon.ico/
+[pid: 1213|app: 0|req: 7/15] 102.126.6.31 () {46 vars in 894 bytes} [Thu Jul 15 12:12:21 2021] GET /favicon.ico/ => generated 3274 bytes in 27 msecs (HTTP/1.1 404) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 9/16] 83.110.8.207 () {42 vars in 1110 bytes} [Thu Jul 15 12:23:20 2021] GET / => generated 8078 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 8/17] 83.110.8.207 () {44 vars in 1247 bytes} [Thu Jul 15 12:23:24 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14155 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 10/18] 83.110.8.207 () {44 vars in 1232 bytes} [Thu Jul 15 12:23:29 2021] GET /category/computer/ => generated 7792 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 9/19] 83.110.8.207 () {44 vars in 1183 bytes} [Thu Jul 15 12:23:35 2021] GET /dashboard/ => generated 44970 bytes in 53 msecs (HTTP/1.1 200) 7 headers in 280 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 11/20] 83.110.8.207 () {44 vars in 990 bytes} [Thu Jul 15 12:23:47 2021] GET /comments/ => generated 28294 bytes in 37 msecs (HTTP/1.1 200) 6 headers in 182 bytes (2 switches on core 0)
+[pid: 1213|app: 0|req: 10/21] 83.110.8.207 () {44 vars in 1000 bytes} [Thu Jul 15 12:23:52 2021] GET /dashboard/ => generated 43804 bytes in 57 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 12/22] 83.110.8.207 () {44 vars in 984 bytes} [Thu Jul 15 12:24:10 2021] GET /posts/ => generated 49932 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 11/23] 83.110.8.207 () {44 vars in 994 bytes} [Thu Jul 15 12:24:15 2021] GET /posts/edit/4/ => generated 34016 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 13/24] 83.110.8.207 () {44 vars in 994 bytes} [Thu Jul 15 12:24:16 2021] GET /posts/edit/3/ => generated 31706 bytes in 58 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 12/25] 83.110.8.207 () {44 vars in 994 bytes} [Thu Jul 15 12:24:16 2021] GET /posts/edit/2/ => generated 31714 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 14/26] 83.110.8.207 () {44 vars in 994 bytes} [Thu Jul 15 12:24:18 2021] GET /posts/edit/1/ => generated 31631 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 13/27] 102.122.63.208 () {44 vars in 1027 bytes} [Thu Jul 15 12:24:42 2021] GET /clubhouse-ventures-beyond-audio-with-backchannel-a/ => generated 16156 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 15/28] 83.110.8.207 () {52 vars in 1258 bytes} [Thu Jul 15 12:24:48 2021] POST /posts/edit/4/ => generated 0 bytes in 23 msecs (HTTP/1.1 302) 7 headers in 379 bytes (3 switches on core 0)
+[pid: 1213|app: 0|req: 14/29] 83.110.8.207 () {46 vars in 1166 bytes} [Thu Jul 15 12:24:48 2021] GET /posts/ => generated 50492 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 280 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 16/30] 102.122.63.208 () {44 vars in 976 bytes} [Thu Jul 15 12:25:00 2021] GET / => generated 8062 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 15/31] 83.110.8.207 () {52 vars in 1258 bytes} [Thu Jul 15 12:25:10 2021] POST /posts/edit/3/ => generated 0 bytes in 51 msecs (HTTP/1.1 302) 7 headers in 379 bytes (3 switches on core 0)
+[pid: 1204|app: 0|req: 17/32] 83.110.8.207 () {46 vars in 1166 bytes} [Thu Jul 15 12:25:11 2021] GET /posts/ => generated 50492 bytes in 48 msecs (HTTP/1.1 200) 7 headers in 280 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 16/33] 83.110.8.207 () {52 vars in 1258 bytes} [Thu Jul 15 12:25:21 2021] POST /posts/edit/2/ => generated 0 bytes in 24 msecs (HTTP/1.1 302) 7 headers in 379 bytes (19 switches on core 0)
+[pid: 1204|app: 0|req: 18/34] 83.110.8.207 () {46 vars in 1166 bytes} [Thu Jul 15 12:25:21 2021] GET /posts/ => generated 50492 bytes in 48 msecs (HTTP/1.1 200) 7 headers in 280 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 17/35] 83.110.8.207 () {52 vars in 1258 bytes} [Thu Jul 15 12:25:30 2021] POST /posts/edit/1/ => generated 0 bytes in 26 msecs (HTTP/1.1 302) 7 headers in 379 bytes (3 switches on core 0)
+[pid: 1204|app: 0|req: 19/36] 83.110.8.207 () {46 vars in 1166 bytes} [Thu Jul 15 12:25:30 2021] GET /posts/ => generated 50492 bytes in 46 msecs (HTTP/1.1 200) 7 headers in 280 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 18/37] 102.122.63.208 () {46 vars in 1007 bytes} [Thu Jul 15 12:25:34 2021] GET / => generated 8118 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 20/38] 83.110.8.207 () {42 vars in 927 bytes} [Thu Jul 15 12:25:38 2021] GET / => generated 8118 bytes in 42 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 19/39] 83.110.8.207 () {44 vars in 1064 bytes} [Thu Jul 15 12:25:44 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14146 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 350 bytes (2 switches on core 0)
+[pid: 1204|app: 0|req: 21/40] 83.110.8.207 () {52 vars in 1296 bytes} [Thu Jul 15 12:25:58 2021] POST /make-your-life-better-by-saying-thank-you-in-these/ => generated 0 bytes in 22 msecs (HTTP/1.1 302) 7 headers in 453 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 20/41] 83.110.8.207 () {46 vars in 1323 bytes} [Thu Jul 15 12:25:58 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14171 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 22/42] 83.110.8.207 () {52 vars in 1473 bytes} [Thu Jul 15 12:26:22 2021] POST /make-your-life-better-by-saying-thank-you-in-these/ => generated 0 bytes in 20 msecs (HTTP/1.1 302) 7 headers in 459 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 21/43] 83.110.8.207 () {46 vars in 1329 bytes} [Thu Jul 15 12:26:22 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14179 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 23/44] 83.110.8.207 () {44 vars in 1169 bytes} [Thu Jul 15 12:26:30 2021] GET /comments/ => generated 29460 bytes in 35 msecs (HTTP/1.1 200) 7 headers in 280 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 24/45] 102.122.63.208 () {44 vars in 1027 bytes} [Thu Jul 15 12:28:00 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14179 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 22/46] 102.122.63.208 () {52 vars in 1259 bytes} [Thu Jul 15 12:28:10 2021] POST /make-your-life-better-by-saying-thank-you-in-these/ => generated 0 bytes in 25 msecs (HTTP/1.1 302) 7 headers in 453 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 25/47] 102.122.63.208 () {46 vars in 1286 bytes} [Thu Jul 15 12:28:10 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14168 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 23/48] 83.110.8.207 () {44 vars in 1049 bytes} [Thu Jul 15 12:28:25 2021] GET /category/computer/ => generated 7833 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 26/49] 83.110.8.207 () {44 vars in 1082 bytes} [Thu Jul 15 12:28:31 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14168 bytes in 54 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 24/50] 83.110.8.207 () {44 vars in 1115 bytes} [Thu Jul 15 12:28:37 2021] GET /clubhouse-ventures-beyond-audio-with-backchannel-a/ => generated 16168 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 27/51] 83.110.8.207 () {44 vars in 1049 bytes} [Thu Jul 15 12:29:29 2021] GET /category/computer/ => generated 7833 bytes in 42 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 25/52] 102.122.63.208 () {44 vars in 1153 bytes} [Thu Jul 15 12:29:52 2021] GET / => generated 8119 bytes in 42 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 28/53] 83.110.8.207 () {52 vars in 1296 bytes} [Thu Jul 15 12:29:53 2021] POST /clubhouse-ventures-beyond-audio-with-backchannel-a/ => generated 0 bytes in 20 msecs (HTTP/1.1 302) 7 headers in 453 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 26/54] 83.110.8.207 () {46 vars in 1323 bytes} [Thu Jul 15 12:29:53 2021] GET /clubhouse-ventures-beyond-audio-with-backchannel-a/ => generated 14107 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 29/55] 102.122.63.208 () {44 vars in 1204 bytes} [Thu Jul 15 12:30:01 2021] GET /crypto-startup-phantom-banks-funding-from-andreess/ => generated 14204 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 27/56] 83.110.8.207 () {46 vars in 1323 bytes} [Thu Jul 15 12:30:08 2021] GET /clubhouse-ventures-beyond-audio-with-backchannel-a/ => generated 14107 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 30/57] 102.122.63.208 () {44 vars in 1173 bytes} [Thu Jul 15 12:30:11 2021] GET /dashboard/ => generated 44388 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 280 bytes (2 switches on core 0)
+[pid: 1213|app: 0|req: 28/58] 83.110.8.207 () {44 vars in 1259 bytes} [Thu Jul 15 12:30:17 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14168 bytes in 48 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 31/59] 83.110.8.207 () {44 vars in 1292 bytes} [Thu Jul 15 12:30:20 2021] GET /clubhouse-ventures-beyond-audio-with-backchannel-a/ => generated 14107 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 29/60] 83.110.8.207 () {44 vars in 1292 bytes} [Thu Jul 15 12:30:25 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14168 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 32/61] 83.110.8.207 () {44 vars in 1292 bytes} [Thu Jul 15 12:30:30 2021] GET /singapore-based-tinvio-raises-12m-series-a-to-buil/ => generated 14188 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 30/62] 83.110.8.207 () {44 vars in 1292 bytes} [Thu Jul 15 12:30:35 2021] GET /clubhouse-ventures-beyond-audio-with-backchannel-a/ => generated 14107 bytes in 51 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 33/63] 102.122.63.208 () {44 vars in 953 bytes} [Thu Jul 15 12:31:12 2021] GET /comments/ => generated 28294 bytes in 38 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 31/64] 102.122.63.208 () {44 vars in 952 bytes} [Thu Jul 15 12:31:20 2021] GET /comments/ => generated 28294 bytes in 34 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 34/65] 102.122.63.208 () {44 vars in 993 bytes} [Thu Jul 15 12:31:24 2021] GET /comments/?post_filter=approved => generated 28314 bytes in 34 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 32/66] 102.122.63.208 () {44 vars in 1004 bytes} [Thu Jul 15 12:31:28 2021] GET /comments/?post_filter=all => generated 28294 bytes in 34 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 35/67] 102.122.63.208 () {42 vars in 908 bytes} [Thu Jul 15 12:31:38 2021] GET /comments/ => generated 28294 bytes in 36 msecs (HTTP/1.1 200) 6 headers in 182 bytes (1 switches on core 0)
+[pid: 1213|app: 0|req: 33/68] 102.122.63.208 () {44 vars in 914 bytes} [Thu Jul 15 12:31:53 2021] GET / => generated 8119 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 181 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 36/69] 102.122.63.208 () {44 vars in 1027 bytes} [Thu Jul 15 12:32:16 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14168 bytes in 56 msecs (HTTP/1.1 200) 7 headers in 350 bytes (2 switches on core 0)
+[pid: 1213|app: 0|req: 34/70] 83.110.8.207 () {44 vars in 1190 bytes} [Thu Jul 15 12:33:29 2021] GET / => generated 8119 bytes in 43 msecs (HTTP/1.1 200) 6 headers in 181 bytes (2 switches on core 0)
+[pid: 1204|app: 0|req: 37/71] 83.110.8.207 () {44 vars in 1241 bytes} [Thu Jul 15 12:35:16 2021] GET /crypto-startup-phantom-banks-funding-from-andreess/ => generated 14204 bytes in 52 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
+[pid: 1204|app: 0|req: 38/72] 102.122.63.208 () {46 vars in 1058 bytes} [Thu Jul 15 12:44:03 2021] GET /make-your-life-better-by-saying-thank-you-in-these/ => generated 14168 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 350 bytes (1 switches on core 0)
