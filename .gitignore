@@ -8,3 +8,9 @@ blog.md
 ref.md
 db.sqlite3
 jstools/
+uwsgi-emperor.log
+blog_script_uwsgi.ini
+blog_script.sock
+uwsgi_params
+ckeditor/
+Pipfile
