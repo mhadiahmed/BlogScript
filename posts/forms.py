@@ -1,9 +1,7 @@
 from django import forms
 from .models import Post
-from ckeditor.fields import RichTextField
 
 class PostDashboardModelForm(forms.ModelForm):
-    # body = RichTextField()
     class Meta:
         model = Post
         fields = ["author", "category", "title", "body", "image", "status",'meta_tag_title','meta_tag_description','meta_tag_keywords']

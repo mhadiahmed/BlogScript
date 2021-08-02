@@ -1,5 +1,5 @@
 from django import forms
-from .models import SiteSetting, Option
+from .models import Page, SiteSetting, Option
 from posts.models import Categories
 
 class SiteSettingForm(forms.ModelForm):
@@ -45,5 +45,20 @@ class CategoriesForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(CategoriesForm, self).__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'appearance-none block w-full py-3 px-4 leading-tight text-gray-700  focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none'
+
+
+class PageForm(forms.ModelForm):
+    """Form definition for FlatPage."""
+
+    class Meta:
+        """Meta definition for FlatPageform."""
+
+        model = Page
+        fields = ('title','url', 'status', 'sites', 'content')
+    
+    def __init__(self, *args, **kwargs):
+        super(PageForm, self).__init__(*args, **kwargs)
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'appearance-none block w-full py-3 px-4 leading-tight text-gray-700  focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none'

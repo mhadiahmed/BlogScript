@@ -46,13 +46,18 @@
                 <li class="nav-item {% if request.path == '/' %}active{% endif %}">
                     <a class="nav-link" href="{% url 'core:list' %}">Stories <span class="sr-only">(current)</span></a>
                 </li>
-                {% for category in category %}
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == category.get_absolute_url %}active{% endif %}"
-                        href="{% url 'core:category' category.slug %}">{{category.name}} <span
-                            class="sr-only"></span></a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for category in category %}
+                        <a class="dropdown-item" href="{% url 'core:category' category.slug %}">{{category.name}}</a>
+                        {% endfor %}
+                    </div>
                 </li>
-                {% endfor %}
 
                 {% if request.user.is_authenticated %}
 
@@ -67,6 +72,12 @@
                     <a class="nav-link" href="{% url 'authors:login' %}">Login</a>
                 </li>
                 {% endif %}
+                {% for page in pag_es %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == page.get_absolute_url %}active{% endif %}"
+                        href="/site{{page.url}}">{{page.title}} <span class="sr-only"></span></a>
+                </li>
+                {% endfor %}
             </ul>
             <!-- End Menu -->
             <!-- Begin Search -->

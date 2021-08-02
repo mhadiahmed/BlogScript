@@ -1,5 +1,14 @@
+from django.contrib.sites.models import Site
 from django.db import models
+from django.db.models.signals import pre_delete, pre_save
+from django.dispatch.dispatcher import receiver
 from authors.models import Author
+from ckeditor.fields import RichTextField
+from .utils import create_flat_page_template, delete_flat_page_template
+from django.db import models
+from django.urls import NoReverseMatch, get_script_prefix, reverse
+from django.utils.encoding import iri_to_uri
+from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 class SiteSetting(models.Model):
@@ -47,16 +56,55 @@ class Option(models.Model):
     #     pass
 
 
-# class Protection(models.Model):
-#     """Model definition for Protection."""
-#     pass
+class Page(models.Model):
+    STATUS = (('active','Active'),
+            ('Draft', 'Draft'))
+    url = models.CharField(_('URL'), max_length=100, db_index=True)
+    title = models.CharField(_('title'), max_length=200)
+    content = RichTextField()
+    status = models.CharField(max_length=20, choices=STATUS, default="active")
+    template_name = models.CharField(
+        _('template name'),
+        max_length=70,
+        blank=True,
+        help_text=_(
+            'Example: “flatpages/contact_page.html”. If this isn’t provided, '
+            'the system will use “flatpages/default.html”.'
+        ),
+    )
+    
+    registration_required = models.BooleanField(
+        _('registration required'),
+        help_text=_("If this is checked, only logged-in users will be able to view the page."),
+        default=False,
+    )
+    sites = models.ManyToManyField(Site, verbose_name=_('sites'))
+    class Meta:
+        db_table = 'django_pages'
+        verbose_name = _('pages')
+        verbose_name_plural = _('pages')
+        ordering = ['url']
 
-#     class Meta:
-#         """Meta definition for Protection."""
+    def __str__(self):
+        return "%s -- %s" % (self.url, self.title)
 
-#         verbose_name = 'Protection'
-#         verbose_name_plural = 'Protections'
+    def get_absolute_url(self):
+        from .views import page
 
-#     def __str__(self):
-#         """Unicode representation of Protection."""
-#         pass
+        for url in (self.url.lstrip('/'), self.url):
+            try:
+                return reverse(page, kwargs={'url': url})
+            except NoReverseMatch:
+                pass
+        # Handle script prefix manually because we bypass reverse()
+        return iri_to_uri(get_script_prefix().rstrip('/') + self.url)    
+    
+
+@receiver(pre_save, sender=Page)
+def post_save_receiver(sender, instance, *args, **kwargs):
+    if not instance.template_name:
+        instance.template_name = create_flat_page_template(instance.title)
+        
+@receiver(pre_delete, sender=Page)
+def post_save_receiver(sender, instance, *args, **kwargs):
+    delete_flat_page_template(instance.title)

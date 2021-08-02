@@ -2,8 +2,11 @@ from .models import Categories
 
 
 def category(request):
-    category = Categories.objects.filter(status="active")
-    context = {
+    try:
+        category = Categories.objects.filter(status="active")
+    except:
+        category = None
+    
+    return{
         "category":category
     }
-    return context
