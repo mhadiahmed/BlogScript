@@ -7,12 +7,12 @@ def site_settings(request):
         pag_es = None
         
     try:
-        site_settings=SiteSetting.objects.get(id=1) ,
+        site_settings=get_object_or_404(SiteSetting,id=1)
     except:
         site_settings = None
         
     try:
-        Options=Option.objects.get(id=1)
+        Options=get_object_or_404(Option,id=1)
     except:
         Options= None
         
