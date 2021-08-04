@@ -148,7 +148,7 @@ class PageDeleteView(DeleteView):
     context_object_name = "page"
     
     def delete(self, request: HttpRequest, *args: str, **kwargs: Any) -> HttpResponse:
-        messages.success(self.request, 'Category deleted successfully')
+        messages.success(self.request, 'Page deleted successfully')
         return super().delete(request, *args, **kwargs)
     
 
