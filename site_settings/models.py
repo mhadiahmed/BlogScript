@@ -8,7 +8,7 @@ from django.urls import NoReverseMatch, get_script_prefix, reverse
 from django.utils.encoding import iri_to_uri
 from django.utils.translation import gettext_lazy as _
 
-from .utils import create_flat_page_template, delete_flat_page_template
+from .utils import check_file_exists, create_flat_page_template, delete_flat_page_template
 
 # Create your models here.
 
@@ -98,8 +98,16 @@ class Page(models.Model):
             except NoReverseMatch:
                 pass
         # Handle script prefix manually because we bypass reverse()
-        return iri_to_uri(get_script_prefix().rstrip('/') + self.url)    
+        return iri_to_uri(get_script_prefix().rstrip('/') + self.url)
     
+
+    def update_page(sender, instance,  *args, **kwargs):
+        if check_file_exists(instance.template_name):
+            print('exists')
+        else:
+            instance.template_name = create_flat_page_template(instance.title)
+
+pre_save.connect(Page.update_page, sender=Page)
 
 @receiver(pre_save, sender=Page)
 def pre_save_receiver(sender, instance, *args, **kwargs):
@@ -109,3 +117,4 @@ def pre_save_receiver(sender, instance, *args, **kwargs):
 @receiver(pre_delete, sender=Page)
 def pre_delete_receiver(sender, instance, *args, **kwargs):
     delete_flat_page_template(instance.title)
+

@@ -20,6 +20,8 @@ from django.views.decorators.csrf import csrf_protect
 from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 from posts.models import Categories
 
+from site_settings.utils import TEMPLATE_PATH
+
 from .forms import CategoriesForm, OptionForm, PageForm, SiteSettingForm
 from .models import Option, Page, SiteSetting
 
@@ -173,6 +175,7 @@ def page(request, url):
 
 @csrf_protect
 def render_page(request, f):
+    
     """
     Internal interface to the flat page view.
     """
@@ -182,7 +185,7 @@ def render_page(request, f):
         from django.contrib.auth.views import redirect_to_login
         return redirect_to_login(request.path)
     if f.template_name:
-        template = loader.select_template((f.template_name, DEFAULT_TEMPLATE))
+        template = loader.select_template((f"{TEMPLATE_PATH}{f.template_name}", DEFAULT_TEMPLATE))
     else:
         template = loader.get_template(DEFAULT_TEMPLATE)
 
