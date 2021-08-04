@@ -25,4 +25,8 @@ def file_contet_template():
     
 def delete_flat_page_template(file_name):
     path = f"{BASE_DIR}/core/templates/core/{file_name.lower()}.html"
-    os.remove(path)
+    
+    try:
+        os.remove(path)
+    except FileNotFoundError as e:
+        pass

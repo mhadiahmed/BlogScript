@@ -1,14 +1,15 @@
+from authors.models import Author
+from ckeditor.fields import RichTextField
 from django.contrib.sites.models import Site
 from django.db import models
 from django.db.models.signals import pre_delete, pre_save
 from django.dispatch.dispatcher import receiver
-from authors.models import Author
-from ckeditor.fields import RichTextField
-from .utils import create_flat_page_template, delete_flat_page_template
-from django.db import models
 from django.urls import NoReverseMatch, get_script_prefix, reverse
 from django.utils.encoding import iri_to_uri
 from django.utils.translation import gettext_lazy as _
+
+from .utils import create_flat_page_template, delete_flat_page_template
+
 # Create your models here.
 
 class SiteSetting(models.Model):
@@ -101,10 +102,10 @@ class Page(models.Model):
     
 
 @receiver(pre_save, sender=Page)
-def post_save_receiver(sender, instance, *args, **kwargs):
+def pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.template_name:
         instance.template_name = create_flat_page_template(instance.title)
         
 @receiver(pre_delete, sender=Page)
-def post_save_receiver(sender, instance, *args, **kwargs):
+def pre_delete_receiver(sender, instance, *args, **kwargs):
     delete_flat_page_template(instance.title)
