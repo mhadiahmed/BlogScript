@@ -79,7 +79,7 @@
             </li> {% endcomment %}
 
             {% comment %} {{request.user.role}} {% endcomment %}
-            {% ifequal  request.user.role.role_name "admin" %}
+            {% if  request.user.role.role_name == "admin" %}
             <li x-data="{ isActive: false, open: false}">
               <a class="flex items-center pl-3 py-3 pr-4 text-gray-500 hover:bg-indigo-50 rounded" href="#"
                 @click="$event.preventDefault(); open = !open"
@@ -113,7 +113,7 @@
                 </a>
               </div>
             </li>
-            {% endifequal %}
+            {% endif %}
             <li x-data="{ isActive: false, open: false}">
               <a class="flex items-center pl-3 py-3 pr-4 text-gray-500 hover:bg-indigo-50 rounded"
                 @click="$event.preventDefault(); open = !open"
@@ -164,7 +164,7 @@
 
           <div class="pt-8">
             <ul class="mb-8 text-sm font-medium">
-              {% ifequal request.user.role.role_name  "admin" %}
+              {% if request.user.role.role_name == "admin" %}
               <li x-data="{ isActive: false, open: false}">
                 <a class="flex items-center pl-3 py-3 pr-4 text-gray-500 hover:bg-indigo-50 rounded"
                   @click="$event.preventDefault(); open = !open"
@@ -207,7 +207,7 @@
                   </a>
                 </div>
               </li>
-              {% endifequal %}
+              {% endif %}
             </ul>
             <a class="flex items-center pl-3 py-3 pr-2 text-gray-500 hover:bg-indigo-50 rounded"
               href="{% url 'core:list' %}">

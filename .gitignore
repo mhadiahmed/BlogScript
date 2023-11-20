@@ -13,4 +13,3 @@ blog_script_uwsgi.ini
 blog_script.sock
 uwsgi_params
 ckeditor/
-Pipfile
